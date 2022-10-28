@@ -1,4 +1,4 @@
-name: "Stryker.NET"
+name: "Mutation test"
 on:
   workflow_dispatch:
     inputs:
@@ -12,12 +12,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: "Execute Stryker"
-      id: stryker
+
+    - name: "Run mutation tests"
       uses: tom171296/run-stryker-net@main
       with:
         testProject: "Minor.Nijn.Test/"
         breakAt: ${{ github.event.inputs.break-at }}
+
     - uses: actions/upload-artifact@v3
       with:
         name: html-report
