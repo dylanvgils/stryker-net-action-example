@@ -1,12 +1,13 @@
-name: "Hello world"
+name: "Stryker.NET"
 on:
-  workflow_dispatch: # Run every friday at 23:00
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - uses: tom171296/test-action-hacktober@main
+    - name: "Execute Stryker"
+      uses: tom171296/test-action-hacktober@main
       with:
-        pathToCsproj: "Piet"
+        testProject: "Minor.Nijn.Test/"
