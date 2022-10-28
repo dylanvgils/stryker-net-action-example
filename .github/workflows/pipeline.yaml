@@ -5,6 +5,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: tom171296/test-action-hacktober
+    - uses: tom171296/test-action-hacktober@v2
       with:
         testInput2: "Piet"
