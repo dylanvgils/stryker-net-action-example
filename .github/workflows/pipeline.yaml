@@ -12,5 +12,7 @@ jobs:
       uses: tom171296/test-action-hacktober@main
       with:
         testProject: "Minor.Nijn.Test/"
-    - run: |
-        echo $(cat ${{github.workspace}}/Minor.Nijn.Test/StrykerOutput/**/**/*.html)
+    - uses: actions/upload-artifact@v3
+      with:
+        name: html-report
+        path: ${{github.workspace}}/Minor.Nijn.Test/StrykerOutput/**/**/*.html
