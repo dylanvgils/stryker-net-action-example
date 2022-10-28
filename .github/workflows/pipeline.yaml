@@ -13,4 +13,4 @@ jobs:
       with:
         testProject: "Minor.Nijn.Test/"
     - run: |
-        echo $(cat ${{GITHUB_WORKSPACE}}/Minor.Nijn.Test/StrykerOutput/**/**/*.html)
+        echo $(cat ${{github.workspace}}/Minor.Nijn.Test/StrykerOutput/**/**/*.html)
