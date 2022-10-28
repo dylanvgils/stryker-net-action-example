@@ -21,8 +21,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Minor.Nijn\Minor.Nijn.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Minor.Nijn\Minor.Nijn.csproj" />
-  </ItemGroup>
 </Project>
