@@ -1,0 +1,10 @@
+{
+    "stryker-config":
+    {
+        "project": "Minor.Nijn/Minor.Nijn.csproj",
+        "reporters": [
+            "progress",
+            "html"
+        ]
+    }
+}
