@@ -1,6 +1,11 @@
 name: "Stryker.NET"
 on:
   workflow_dispatch:
+    inputs:
+      break-at:
+        type: string
+        description: "Configure break_at stryker option"
+        default: "0"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,9 +14,10 @@ jobs:
       uses: actions/checkout@v3
     - name: "Execute Stryker"
       id: stryker
-      uses: tom171296/test-action-hacktober@main
+      uses: tom171296/run-stryker-net@main
       with:
         testProject: "Minor.Nijn.Test/"
+        breakAt: ${{ github.event.inputs.break-at }}
     - uses: actions/upload-artifact@v3
       with:
         name: html-report
