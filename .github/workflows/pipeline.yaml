@@ -7,4 +7,4 @@ jobs:
     steps:
     - uses: tom171296/test-action-hacktober@main
       with:
-        testInput2: "Piet"
+        pathToProjectfile: "Piet"
