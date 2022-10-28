@@ -1,0 +1,10 @@
+name: "Hello world"
+on:
+  workflow_dispatch: # Run every friday at 23:00
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: tom171296/test-action-hacktober
+      with:
+        testInput2: "Piet"
