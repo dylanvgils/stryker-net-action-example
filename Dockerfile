@@ -1,8 +1,10 @@
 # Container image that runs your code
 FROM mcr.microsoft.com/dotnet/sdk:6.0
 
-COPY entrypoint.sh /entrypoint.sh
+ENV PATH="${PATH}:/root/.dotnet/tools"
+
+COPY entrypoint.ps1 /entrypoint.ps1
 RUN dotnet tool install -g dotnet-stryker
 COPY . /app
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.ps1", "/app/Minor.Nijn.Test/"]
