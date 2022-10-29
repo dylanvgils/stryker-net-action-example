@@ -22,9 +22,8 @@ jobs:
       with:
         testProject: "Minor.Nijn.Test/"
         breakAt: ${{ github.event.inputs.break-at }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PR_NUMBER: ${{ github.event.inputs.pr-number }}
+        githubToken: ${{ secrets.GITHUB_TOKEN }}
+        prNumber: ${{ github.event.inputs.pr-number }}
 
     - uses: actions/upload-artifact@v3
       with:
